@@ -195,6 +195,12 @@ public class ActiveRepairService implements IEndpointStateChangeSubscriber, IFai
                 .build();
     }
 
+    @VisibleForTesting
+    public int sessionCount()
+    {
+        return sessions.size();
+    }
+
     public static ExecutorPlus repairCommandExecutor()
     {
         return RepairCommandExecutorHandle.repairCommandExecutor;
